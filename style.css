@@ -1,0 +1,497 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+#nav{
+    display: flex;
+    height: 90px;
+    width: 100%;
+    gap: 45px;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 60px 111px;
+    position: fixed;
+    z-index: 99;
+}
+
+#nav img{
+    height: 157px;
+}
+
+#nav h4{
+    text-transform: uppercase;
+    font-weight: 500;
+} 
+
+video{
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+   transform:scale(1.3)
+}
+
+#main{
+    position: relative;
+}
+
+#page1{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(0, 0, 0, 0.37);
+    text-align: center;
+}
+
+#page1 h1{
+    font-size: 140px;
+    font-weight: 900;
+    position: relative;
+}
+
+#page1 h1::before{
+content:"Eat. Drink. Play." ;
+position: absolute;
+color: #000;
+top: -5px;
+left: -5px;
+-webkit-text-stroke: 1px #ffea01;
+z-index: -1;
+}
+
+#page1 h2{
+    font-size: 30px;
+    font-weight: 800;
+    margin:10px 0 20px 0;
+}
+
+#page1 p{
+    font-size: 20px;
+    font-weight: 400;
+    width: 50%;
+}
+
+#page2{
+    min-height: 100vh;
+    width: 100%;
+    background-color: rgb(0, 0, 0, 0.37);
+}
+
+#cursor{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: rgba(186, 137, 1, 0.889);
+    z-index:99 ;
+    position: fixed;
+}
+
+#cursor-blur{
+    height: 250px;
+    width: 250px;
+    filter: blur(30px);
+    z-index: 9;
+    background-color:rgba(254, 187, 2, 0.115) ;
+    position:fixed ;
+    border-radius: 50%;
+}
+
+#scroller{
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 15;
+    text-transform: uppercase;
+  
+}
+
+#scroller::-webkit-scrollbar{
+    display: none;
+}
+
+#scroller h4{
+   display: inline-block;
+   white-space: nowrap;
+   margin:0 50px;
+   font-size: 110px;
+   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   font-weight: 800;
+   -webkit-text-stroke: 2px white;
+   color: transparent;
+   transition: all linear 0.4s;
+}
+
+#scroll-in {
+display: inline-block;
+white-space: nowrap;
+  animation-name: scroll;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#scroller h4:hover{
+color: #f6b607;
+-webkit-text-stroke: 2px #f6b607;
+}
+
+@keyframes scroll{
+    from{
+        transform: translate(0);
+    }
+    to{
+        transform: translate(-100%);
+    }
+}
+
+
+#about-us {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    padding: 0 80px;
+    background-color: rgba(0, 0, 0, 0.37);
+    box-sizing: border-box;
+}
+
+#about-us img {
+    height: 250px;
+    width: 250px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+#about {
+    width: 40%;
+    text-align: center;
+}
+
+#about h3 {
+    font-size: 54px;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+#about p {
+    font-size: 20px;
+    line-height: 28px;
+}
+
+/* Fix cards alignment */
+#cards {
+   position: relative;
+  min-height: 80vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  background-color: transparent;
+  position: relative;
+  z-index: 10;
+}
+
+.card {
+     height: 90%;
+  width: 22%;
+  background-color: #000;
+  border-radius: 20px;
+  border: 2px solid #4a3511;
+  background-size: cover;
+  background-position: center;
+ transition: all ease 0.5s;
+ 
+}
+
+#card1{
+    background-image: url(https://images.unsplash.com/photo-1534432182912-63863115e106?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGJha2VyeXxlbnwwfHwwfHx8MA%3D%3D);
+    
+}
+
+#card3{
+    background-image: url(https://images.unsplash.com/photo-1534040385115-33dcb3acba5b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjR8fGNhZmV8ZW58MHx8MHx8fDA%3D);
+}
+
+#card2{
+    background-image: url(https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+}
+
+#card-text{
+    background-color: brown;
+    height: 58vh;
+    width: 100%;
+    border-radius: 19px;
+    opacity: 0;
+    transition: all linear 0.2s;
+}
+
+#card-text:hover{
+    opacity: 1;
+}
+
+#card-text h4{
+font-size: 45px;
+padding: 10px;
+padding-top: 40px;
+font-weight: 700;
+text-transform: uppercase;
+}
+
+#card-text p{
+font-size: 20px;
+padding: 10px;
+}
+
+.card:hover #card-text{
+    opacity: 1;
+}
+
+.card:hover{
+    transform:scale(1.1)
+}
+
+#brown-div{
+    height: 31vh;
+    width: full;
+    background-color: #f6b607;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 7%;
+}
+
+#brown-div img{
+    height: 100%;
+    width: 12.5%;
+  object-fit: cover;
+    
+}
+
+#brown-div p{
+    text-align: center;
+    width: 60%;
+    font-size: 24px;
+    font-weight: 800;
+    color: #170b04;
+}
+
+#page3{
+    height: 70vh;
+    width: full;
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  
+}
+
+
+
+#page3>p{
+     font-size: 35px;
+  font-weight: 700;
+  width: 60%;
+  line-height: 45px;
+  text-align: center;
+}
+
+#page3 img {
+  position: absolute;
+  height: 60px;
+}
+
+#page3 #colon1 {
+  left: 15%;
+  top: 25%;
+}
+
+#page3 #colon2 {
+  bottom: 30%;
+  right: 15%;
+}
+
+#page4{
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    gap: 70px;
+    background-color: black;
+}
+
+.cardm{
+    height: 35%;
+    width: 22%;
+    border-radius: 10px;
+    position: relative;
+    background-color:#f6b607;
+    overflow: hidden;
+}
+
+.cardm img{
+   height: 100%;
+   width: 100%;
+   position: absolute;
+   object-fit: cover;
+}
+
+.elem {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  color: black;
+  font-weight: 800;
+  font-size: xx-large;
+  transition: all ease 0.5s;
+  z-index: 100;
+  position: relative;
+}
+
+.elem:hover{
+    color: white;
+    position: absolute;
+}
+
+#page4 h1{
+    position: absolute;
+    top: 18%;
+    font-size: 65px;
+    text-transform: uppercase;
+    color: transparent;
+      -webkit-text-stroke: 2px #fff;
+}
+
+#footer{
+    height: 38vh;
+    width: 100%;
+    background-color:#2c2211;
+   display: flex;
+}
+
+#footer{
+    height: 40vh;
+    width: 100%;
+    background:linear-gradient(to left bottom,#f6b607 0%,#9b4b0b 80%);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 150px;
+    padding: 0 100px;
+    overflow: hidden;
+    text-align: center;
+}
+
+
+#logoimg{
+    height: 70%;
+    position: absolute;
+    left: 5%;
+    transition: all ease 0.5s;
+    z-index: 100;
+}
+
+#logoimg:hover{
+    height: 55%;
+}
+
+#img1{
+    height:100%;
+    left: 30px;
+    position: absolute;
+    object-fit: cover;
+}
+
+#endtitles{
+    position: absolute;
+    display: flex;
+    height: 60%;
+    width: 70%;
+    gap:100px;
+    justify-content: center;
+    align-items:top;
+    left: 18%;
+}
+
+
+
+.foot1 h3{
+font-size: 26px;
+color: #fff;
+text-transform: uppercase;
+margin-bottom: 10px;
+font-weight: 800;
+transition: all linear 0.2s;
+text-align: start;
+}
+
+.foot2 p{
+font-size: 17px;
+margin: 5px;
+color: #fff;
+text-transform: uppercase;
+font-weight: 700;
+font: bold;
+text-align: start;
+}
+
+.foot2 h3{
+font-size: 19px;
+margin: 5px;
+color: #fff;
+text-transform: uppercase;
+font-weight: 800;
+transition: all linear 0.2s;
+}
+
+.foot1 h3:hover{
+color: white;
+}
+
+.foot2 h3:hover{
+color: white;
+}
+
+
+#copy{
+    height: 5vh;
+    background:linear-gradient(to left top,#f6b607 0%,#9b4b0b 80%);
+    position: relative;
+    overflow: hidden;
+}
+
+
+#copyr{
+    width: 100%;
+    position: absolute;
+    text-align:start;
+    font-size: 15px;
+    color: #fff;
+    text-align: center;
+    font-weight: 600;
+    
+}
+
